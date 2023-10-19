@@ -1,17 +1,17 @@
 package it.dedagroup.project_cea.dto.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 //TODO Implementare i vari attributi di Apartment
-//TODO Implementare le validation di Apartment
+
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class ApartmentDTOResponse {
-//	private long id;
-    private int unitNumber;
+	private long id;
+	private int unitNumber;
 	private int floorNumber;
-	private CustomerDtoResponse customer;
-	private ScanDTOResponse meter;
-	//private CondominiumDtoResponse condominium;
+	private long id_customer;
+	private long id_condominium;
 }
