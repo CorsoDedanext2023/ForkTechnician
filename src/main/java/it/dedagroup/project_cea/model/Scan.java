@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Scan {
+public class  Scan {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;

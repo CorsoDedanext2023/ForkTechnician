@@ -65,14 +65,14 @@ public class TechnicianServiceImpl implements TechnicianServiceDef{
 	}
 
 	@Override
-	public void remove(long id) {
+	public void removeById(long id) {
 		Technician t = techRepo.findById(id).orElseThrow(()->new UserNotFoundException("Technician not found with ID: " + id));
 		t.setAvailable(false);
 		techRepo.save(t);
 	}
 
 	@Override
-	public void removeTechncianByUsername(String username) {
+	public void removeByUsername(String username) {
 		Technician tech = techRepo.findByUsername(username).orElseThrow(()->new UserNotFoundException("Technician not found with username: " +username));
 		tech.setAvailable(false);
 		techRepo.save(tech);

@@ -10,8 +10,8 @@ public interface TechnicianServiceDef {
 	Technician update(Technician t);
 	
 //	boolean removeTechnician (TechnicianRequest request);
-	void remove(long id);
-	void removeTechncianByUsername(String username);
+	public void removeById(long id);
+	void removeByUsername(String username);
 	
 	Technician findById(long idTechnician);
 	Technician findByUsername(String username);

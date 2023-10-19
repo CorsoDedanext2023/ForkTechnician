@@ -5,15 +5,15 @@ import java.util.List;
 import it.dedagroup.project_cea.dto.response.ApartmentForCondominiumDtoResponse;
 import org.springframework.stereotype.Component;
 
-import it.dedagroup.project_cea.dto.response.ApartmentDtoResponse;
+import it.dedagroup.project_cea.dto.response.ApartmentDTORespons;
 import it.dedagroup.project_cea.exception.model.NotValidDataException;
 import it.dedagroup.project_cea.model.Apartment;
 
 @Component
 public class ApartmentMapper {
-	public ApartmentDtoResponse toDto(Apartment a) {
+	public ApartmentDTORespons toDto(Apartment a) {
 		if (a == null)throw new NotValidDataException("Apartment is empty: "+a);
-		ApartmentDtoResponse apart = new ApartmentDtoResponse();
+		ApartmentDTORespons apart = new ApartmentDTORespons();
 		apart.setId(a.getId());
 		apart.setUnitNumber(a.getUnitNumber());
 		apart.setFloorNumber(a.getFloorNumber());
@@ -21,7 +21,7 @@ public class ApartmentMapper {
 		apart.setId_condominium(a.getCondominium().getId());
 		return apart;
 	}
-	public List<ApartmentDtoResponse> toListDto(List<Apartment> apart){
+	public List<ApartmentDTORespons> toListDto(List<Apartment> apart){
 		if (apart == null || apart.isEmpty())throw new NotValidDataException("List of apartments is empty: "+apart);
 		return apart.stream().map(this::toDto).toList();
 	}

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApartmentDtoResponse {
+public class ApartmentDTOResponse {
 	private long id;
 	private int unitNumber;
 	private int floorNumber;
